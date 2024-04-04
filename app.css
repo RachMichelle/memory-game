@@ -33,20 +33,27 @@ h1{
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 0;
+    margin-top:0;
 }
 
-.card.down{
+.card{
     border: 1px solid black;
     height: 100%;
     width: 100%;
     border-radius: 10%;
     background-color: darkgray;
+    position:relative;
     display:flex;
     align-items: center;
     justify-content: center;
     font-family: Inconsolata;
     font-size: 50px;
     font-weight: bold;
+}
+
+.flipped, .down{
+    position:absolute;
+    backface-visibility: hidden;
 }
 
 #newGame{
@@ -66,7 +73,12 @@ h1{
     width: 10rem;
 }
 
-.card.flipped{
+#startOver:active{
+    transform: scale(0.98);
+    transition: transform .1s;
+}
+
+.flipped{
     border: 1px solid black;
     height: 100%;
     width: 100%;
@@ -75,7 +87,13 @@ h1{
     display:flex;
     align-items: center;
     justify-content: center;
-    font-family: Inconsolata;
     font-size: 50px;
-    font-weight: bold;
+    transform:rotatey(180deg);
+    backface-visibility: hidden;
+
+}
+
+.card:active{
+    transform: scale(0.95);
+    transition: transform .2s;
 }
