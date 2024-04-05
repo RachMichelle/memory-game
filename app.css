@@ -49,6 +49,8 @@ h1{
     font-family: Inconsolata;
     font-size: 50px;
     font-weight: bold;
+    transform-style: preserve-3d;
+    transition: transform .5s;
 }
 
 .flipped, .down{
@@ -78,7 +80,7 @@ h1{
     transition: transform .1s;
 }
 
-.flipped{
+.flipped, .found{
     border: 1px solid black;
     height: 100%;
     width: 100%;
@@ -96,4 +98,8 @@ h1{
 .card:active{
     transform: scale(0.95);
     transition: transform .2s;
+}
+
+.card.flip{
+    transform: rotateY(180deg);
 }
