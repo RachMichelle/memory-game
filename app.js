@@ -89,7 +89,7 @@ gameBoard.addEventListener("click", function(){
 })
 
 gameBoard.addEventListener("click", function(e){
-    if (e.target.classList.contains("flipped") || !e.target.classList.contains("card")){
+    if (e.target.classList.contains("flipped") || !e.target.classList.contains("card") || cardPair.length === 2){
         score += 0;
     } else {
         score += 1;
