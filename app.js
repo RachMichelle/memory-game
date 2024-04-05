@@ -42,9 +42,9 @@ shuffleCards(cardList);
 
 setCardValues();
 
-gameBoard.addEventListener("click", function (e){
-    console.log(e.target);
-})
+// gameBoard.addEventListener("click", function (e){
+//     console.log(e.target);
+// })
 
 gameBoard.addEventListener("click", function (e){
     if (e.target.classList.contains("flipped") || !e.target.classList.contains("card") || cardPair.length === 2){
